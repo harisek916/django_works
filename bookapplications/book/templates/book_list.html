@@ -1,0 +1,34 @@
+{%extends 'base.html'%}
+
+{%block body_block%}
+<h1 class="text-center mt-4 p-2">List of Books</h1>
+<div class="container">
+
+    <table class="table table-bordered border-dark table-striped">
+        <tr>
+            <th>name</th>
+            <th>author</th>
+            <th>Genre</th>
+            <th>price</th>
+            <th>publisher</th>
+            <th class="text-center">Action</th>
+        </tr>
+        {%for book in data%}
+        <tr>
+            <td>{{book.name}} </td>
+            <td>{{book.author}} </td>
+            <td>{{book.genre}}</td>
+            <td><i class="fa-solid fa-indian-rupee-sign"></i> {{book.price}} </td>
+            <td>{{book.publisher}} </td>
+            <td class="d-flex justify-content-evenly">
+                <a href="{%url 'book-detail' book.id%}" class="btn btn-outline-info">view</a>
+                <a href="{%url 'book-remove' book.id%}" class="btn btn-outline-danger">Delete</a>
+                <a href="{%url 'book-change' book.id%}" class="btn btn-outline-secondary">update</a>
+                
+            </td>
+        </tr>
+        {%endfor%}
+    </table>
+</div>
+
+{%endblock%}

@@ -1,0 +1,73 @@
+1.api registering a new user
+
+    url:http://127.0.0.1:8000/api/register/
+    method:post
+    data:{username,email,password}
+    authorization:nill
+    status:completed
+
+2.api for fetch token
+
+    url:http://127.0.0.1:8000/api/token/
+    method:post
+    data:{username,password}
+    authorization:nill
+    status:completed
+
+3.api for fetch all movies
+
+    url:http://127.0.0.1:8000/api/movies/
+    method:get
+    data:nill
+    authorization:Token
+    status:completed
+
+4.api for fetch a specific movie
+
+    url:http://127.0.0.1:8000/api/movies/{id}/
+    method:get
+    data:nill
+    authorization:Token
+    status:completed
+
+5.api for add review to a movie
+
+    url:http://127.0.0.1:8000/api/movies/{id}/add_review/
+    method:post
+    data:{rating,comment}
+    authorization:Token
+    status:completed
+
+6.api for fetch a specific review
+
+    url:http://127.0.0.1:8000/api/reviews/{id}/
+    method:get
+    data:nill
+    authorization:Token
+    status:completed
+
+7.api for update review
+
+    url:http://127.0.0.1:8000/api/reviews/{id}/
+    method:put
+    data:{rating,comment}
+    authorization:Token
+    status:completed
+
+8.api for delete review
+
+    url:http://127.0.0.1:8000/api/reviews/{id}/
+    method:delete
+    data:nill
+    authorization:Token
+    status:completed
+
+
+
+
+
+
+
+
+
+
